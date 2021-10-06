@@ -1,7 +1,7 @@
 version: "3.3"
 services:
-  nextjs-app:
-    container_name: nextjs_ui
+  nextjs:
+    container_name: nextjs
     build:
       context: .
       dockerfile: ./akchak-front/Dockerfile
@@ -15,8 +15,8 @@ services:
       - ./akchak-front:/app/akchak-front
       - /app/akchak-front/node_modules
 
-  nestjs_app:
-    container_name: nestjs_api
+  nestjs:
+    container_name: nestjs
     build:
       context: .
       dockerfile: ./akchak-server/Dockerfile

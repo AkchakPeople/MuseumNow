@@ -6,7 +6,9 @@ COPY ./akchak-front/package*.json ./
 
 COPY . .
 
-RUN npm install
+# RUN npm install 
+RUN npm i react-scripts
+RUN npm install 
 
 EXPOSE 3000
 
