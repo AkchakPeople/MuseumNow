@@ -1,11 +1,15 @@
-FROM node:10
+FROM node:12.19.0-alpine3.9
 
 WORKDIR /app/akchak-front
 
 COPY ./akchak-front/package*.json ./
 
-RUN npm install
+COPY . .
+
+# RUN npm install 
+RUN npm i react-scripts
+RUN npm install 
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+CMD ["npm","run", "start"]

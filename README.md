@@ -1,9 +1,9 @@
 # MuseumAkchak
 
-```
-sudo docker-compose up dev
-```
+## Initialization
+
+### Docker
 
 ```
-sudo docker-compose up prod
+docker-compose up
 ```

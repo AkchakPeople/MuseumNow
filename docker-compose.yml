@@ -1,24 +1,7 @@
 version: "3.3"
 services:
-  nestjs_app:
-    container_name: nestjs_api
-    build:
-      context: .
-      dockerfile: ./akchak-server/Dockerfile
-
-    ports:
-      - 5000:5000
-      - 9229:9229
-    networks:
-      - app-tier
-    volumes:
-      - ./akchak-server:/app/akchak-server
-      - /app/akchak-server/node_modules
-    restart: unless-stopped
-
-  nextjs-app:
-    container_name: nextjs_ui
-
+  nextjs:
+    container_name: nextjs
     build:
       context: .
       dockerfile: ./akchak-front/Dockerfile
@@ -31,6 +14,21 @@ services:
     volumes:
       - ./akchak-front:/app/akchak-front
       - /app/akchak-front/node_modules
+
+  nestjs:
+    container_name: nestjs
+    build:
+      context: .
+      dockerfile: ./akchak-server/Dockerfile
+    ports:
+      - 5000:5000
+      - 9229:9229
+    networks:
+      - app-tier
+    volumes:
+      - ./akchak-server:/app/akchak-server
+      - /app/akchak-server/node_modules
+    restart: unless-stopped
 
 networks:
   app-tier:
