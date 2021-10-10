@@ -2,23 +2,15 @@
 
 ## Initialization
 
-### 🫐 Docker
+###  Docker
 
-1
-
+#### 1. Let’s build the docker image
 ```
-$ cd museumakchak
-```
-
-2
-
-```
-$ docker-compose build
-$ docker-compose up
+docker-compose build
 ```
 
-or
+#### 2. Docker compose up with all associated docker compose services
 
 ```
-docker-compose up --build
+docker-compose up
 ```
