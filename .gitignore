@@ -103,6 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> docker_setting2
 ### macOS ###
 # General
 .DS_Store
@@ -113,6 +117,7 @@ dist
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
+<<<<<<< HEAD
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -120,3 +125,21 @@ dist
 .idea/**/dictionaries
 .idea/**/shelf
 
+=======
+.idea
+
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+>>>>>>> docker_setting2
