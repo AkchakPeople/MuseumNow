@@ -1,0 +1,70 @@
+import React from "react";
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import "../utils/Font.css"
+import { ColorSystem } from "../utils/ColorSystem";
+
+const Positioner = styled.div`
+    top: 0px;
+`;
+
+const HeaderBox = styled.div`
+    height: 56px;
+    width: 100%;
+`;
+
+const LogoBox = styled.div`
+    height: 56px;
+    width: 100%;
+    position: absolute;
+
+    top: 0px;
+    
+`;
+
+const MenuTab = styled.div`
+    font-size: 15px;
+`;
+
+const Logo = styled.div`
+    font-size: 20px;
+    height: 56px;
+`;
+
+const AccountTab = styled.div`
+    font-size: 15px;
+`;
+
+const SignUpBtn = styled.div`
+    font-size: 15px;
+    background-color: #FF6D1C;
+    color: #ffffff;
+`;
+
+const Header = ({children}) => {
+    return (
+        <Positioner className="flex flex-col">
+            <LogoBox bg-transparent>
+                <Logo className="mx-auto flex flex-row items-center justify-center" style={{color : ColorSystem.Textcolor.mainText}}>LOGO</Logo>
+            </LogoBox>
+                <HeaderBox className="flex flex-row">
+                    <MenuTab className="mr-auto ml-20 flex flex-row justify-between content-center">
+                        <ul className="flex flex-row items-center" style={{color : ColorSystem.Textcolor.mainText}}>
+                            <li className="mr-16">전시 정보</li>
+                            <li>포스팅</li>
+                        </ul>
+                    </MenuTab>
+                    <AccountTab className="mr-20 flex flex-row justify-between items-center ml-auto" style={{color : ColorSystem.Textcolor.mainText}}>
+                        <SignUpBtn className="mr-16 px-8 py-1 rounded-full">Sign up</SignUpBtn>
+                        <FontAwesomeIcon icon={faUser} size="lg" className="mr-16" color="#333333"/>
+                        <p>About</p>
+                    </AccountTab>
+                </HeaderBox>
+        </Positioner>
+    );
+};
+
+export default Header;
+
+
