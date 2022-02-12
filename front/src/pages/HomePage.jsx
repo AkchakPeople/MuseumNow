@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import mainIng from "../images/mainImg.png";
 import { ColorSystem } from "../utils/ColorSystem";
 import { ACButton } from "../components/Button";

@@ -48,8 +48,8 @@ const Header = ({ children }) => {
   const navigate = useNavigate();
 
   return (
-    <Positioner className="fixed z-50">
-      <HeaderBox className="flex justify-between z-50">
+    <Positioner className="fixed z-50 ">
+      <HeaderBox className="flex justify-between z-50 bg-white">
         <MenuTab
           className="mr-auto ml-44 w-48 flex flex-row justify-between content-center items-center font-medium"
           style={{ color: ColorSystem.Textcolor.mainText }}
@@ -58,8 +58,9 @@ const Header = ({ children }) => {
           <div>포스팅</div>
         </MenuTab>
         <Logo
-          className="text-center font-bold ml-24"
+          className="text-center font-bold ml-24 cursor-pointer"
           style={{ color: ColorSystem.Textcolor.mainText, lineHeight: "56px" }}
+          onClick={() => navigate("/")}
         >
           MUSEUM NOW
         </Logo>
