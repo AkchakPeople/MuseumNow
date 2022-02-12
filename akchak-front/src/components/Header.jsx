@@ -24,7 +24,7 @@ const LogoBox = styled.div`
 `;
 
 const MenuTab = styled.div`
-  font-size: 15px;
+  font-size: 16px;
 `;
 
 const Logo = styled.div`
@@ -33,11 +33,11 @@ const Logo = styled.div`
 `;
 
 const AccountTab = styled.div`
-  font-size: 15px;
+  font-size: 16px;
 `;
 
 const SignUpBtn = styled.div`
-  font-size: 15px;
+  font-size: 16px;
   background-color: #ff6d1c;
   color: #ffffff;
 `;
@@ -51,24 +51,24 @@ const Header = ({ children }) => {
     <Positioner className="flex flex-col">
       <LogoBox bg-transparent>
         <Logo
-          className="mx-auto flex flex-row items-center justify-center"
+          className="mx-auto flex flex-row items-center justify-center font-bold"
           style={{ color: ColorSystem.Textcolor.mainText }}
         >
           MUSEUM NOW
         </Logo>
       </LogoBox>
       <HeaderBox className="flex flex-row">
-        <MenuTab className="mr-auto ml-20 flex flex-row justify-between content-center">
+        <MenuTab className="mr-auto ml-36 flex flex-row justify-between content-center">
           <ul
-            className="flex flex-row items-center"
+            className="flex flex-row items-center font-medium"
             style={{ color: ColorSystem.Textcolor.mainText }}
           >
-            <li className="mr-16">전시 정보</li>
+            <li className="mr-16 ">전시 정보</li>
             <li>포스팅</li>
           </ul>
         </MenuTab>
         <AccountTab
-          className="mr-20 flex flex-row justify-between items-center ml-auto"
+          className="mr-36 flex flex-row justify-between items-center ml-auto font-medium"
           style={{ color: ColorSystem.Textcolor.mainText }}
         >
           <SignUpBtn className="mr-16 px-8 py-1 rounded-full">

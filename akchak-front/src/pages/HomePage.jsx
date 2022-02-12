@@ -55,7 +55,7 @@ export const HomePage = () => {
             />
           </div>
         </div>
-        <RabbitImg className="mr-24 mt-36" />
+        <RabbitImg className="mr-20 mt-36" />
       </div>
     </>
   );
