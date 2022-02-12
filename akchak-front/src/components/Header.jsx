@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import "../utils/Font.css";
 import { ColorSystem } from "../utils/ColorSystem";
-import { Link } from "react-router-dom";
+import { Link, Router, useNavigate } from "react-router-dom";
 
 const Positioner = styled.div`
-  top: 0px;
+  height: 56px;
+  width: 100%;
 `;
 
 const HeaderBox = styled.div`
@@ -15,13 +15,12 @@ const HeaderBox = styled.div`
   width: 100%;
 `;
 
-const LogoBox = styled.div`
-  height: 56px;
-  width: 100%;
-  position: absolute;
-
-  top: 0px;
-`;
+// const LogoBox = styled.div`
+//   height: 56px;
+//   width: 100%;
+//   position: absolute;
+//   top: 0px;
+// `;
 
 const MenuTab = styled.div`
   font-size: 16px;
@@ -46,44 +45,33 @@ const Header = ({ children }) => {
   //   function handleClick(e) {
   //     window.location.href = "/users";
   //   }
+  const navigate = useNavigate();
 
   return (
-    <Positioner className="flex flex-col">
-      <LogoBox bg-transparent>
-        <Logo
-          className="mx-auto flex flex-row items-center justify-center font-bold"
+    <Positioner className="fixed z-50">
+      <HeaderBox className="flex justify-between z-50">
+        <MenuTab
+          className="mr-auto ml-44 w-48 flex flex-row justify-between content-center items-center font-medium"
           style={{ color: ColorSystem.Textcolor.mainText }}
+        >
+          <div className="">전시 정보</div>
+          <div>포스팅</div>
+        </MenuTab>
+        <Logo
+          className="text-center font-bold ml-24"
+          style={{ color: ColorSystem.Textcolor.mainText, lineHeight: "56px" }}
         >
           MUSEUM NOW
         </Logo>
-      </LogoBox>
-      <HeaderBox className="flex flex-row">
-        <MenuTab className="mr-auto ml-36 flex flex-row justify-between content-center">
-          <ul
-            className="flex flex-row items-center font-medium"
-            style={{ color: ColorSystem.Textcolor.mainText }}
-          >
-            <li className="mr-16 ">전시 정보</li>
-            <li>포스팅</li>
-          </ul>
-        </MenuTab>
         <AccountTab
-          className="mr-36 flex flex-row justify-between items-center ml-auto font-medium"
+          className="mr-44 flex w-72 justify-between items-center ml-auto font-medium"
           style={{ color: ColorSystem.Textcolor.mainText }}
         >
-          <SignUpBtn className="mr-16 px-8 py-1 rounded-full">
-            Sign up
-          </SignUpBtn>
-          <Link to="/users">
-            <FontAwesomeIcon
-              icon={faUser}
-              size="lg"
-              className="mr-16"
-              color="#333333"
-            />
-          </Link>
-
-          <p>About</p>
+          <SignUpBtn className="px-8 py-1 rounded-full">Sign up</SignUpBtn>
+          <div className="cursor-pointer" onClick={() => navigate("/users")}>
+            <FontAwesomeIcon icon={faUser} size="lg" color="#333333" />
+          </div>
+          <div>About</div>
         </AccountTab>
       </HeaderBox>
     </Positioner>
