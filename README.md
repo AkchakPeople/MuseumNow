@@ -1,4 +1,4 @@
-# MuseumAkchak
+# MuseumNow
 
 ## Initialization
 
